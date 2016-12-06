@@ -14,7 +14,7 @@ public class CalcAreaGUIMain2 extends JFrame implements ActionListener {
   JButton b2 = new JButton("Cancel");
   
   public CalcAreaGUIMain2() {
-    JPanel panel = new JPanel(new GridLayout(3,2)); //3행 2열의 버튼
+    JPanel panel = new JPanel(new GridLayout(3,2));
     getContentPane().add(panel);
     JLabel label1 = new JLabel("Radius");
     radiusTf1 = new JTextField(10);
@@ -30,14 +30,14 @@ public class CalcAreaGUIMain2 extends JFrame implements ActionListener {
     panel.add(areaTf2);
     panel.add(b1);
     panel.add(b2);
-    pack(); //요소를 프레임안에 챙겨 넣는것
+    pack();
     setVisible(true);
   }
   public void actionPerformed(ActionEvent e){
     if(e.getSource()==b1) {
       b1.setText("Calculated Complete!");
-      Double r=Double.parseDouble(radiusTf1.getText()); //입력한 반지름을 가져옴
-      areaTf2.setText(Double.toString(Math.PI*Math.pow(r,2))); //아직 만들지 않은 2번째 행의 이름
+      Double r=Double.parseDouble(radiusTf1.getText());
+      areaTf2.setText(Double.toString(Math.PI*Math.pow(r,2)));
     }else if(e.getSource()==b2) {
       radiusTf1.setText(" ");
       areaTf2.setText(" ");
